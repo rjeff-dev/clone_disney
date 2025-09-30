@@ -7,6 +7,11 @@
     text-align: center;
     background-size: cover; //tenta preencher todo o container, preservando a proporção da imagem
 
+    .button{
+        margin-top: 2vw;
+        margin-bottom: 8px;
+    }
+
     &__content{
         max-width: 640px;
 
