@@ -7,6 +7,12 @@
     text-align: center;
     background-size: cover; //tenta preencher todo o container, preservando a proporção da imagem
 
+    &__logi{
+        max-width: 80px;
+        width: 100%;
+        margin: 5px;
+    }
+
     .button{
         margin-top: 2vw;
         margin-bottom: 8px;
@@ -32,17 +38,31 @@
             }
         }
 
-        &__combos{
+        &__combos {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
+            align-items: center;
+            gap: 32px; // aumenta o espaço entre os combos
+            margin-top: 32px;
 
-            &__combo{
-                width: calc(50% - 12px);
+        &__combo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 12px;
+            width: auto;
 
-                img{
-                    max-height: 60px;
-                }                 
+            img {
+                max-height: 60px;
+            }
+
+            .button {
+                width: 180px; // força botões com largura igual
             }
         }
+    }
+
+
     }
 }
