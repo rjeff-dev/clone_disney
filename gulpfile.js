@@ -39,7 +39,7 @@ function images() {
 // =======================
 // TAREFAS PADRÃO E WATCH
 // =======================
-exports.default = gulp.parallel(html, styles, images, scripts);
+exports.default = gulp.parallel(styles, images, scripts);
 
 exports.watch = function () {
     gulp.watch('./src/styles/**/*.scss', gulp.parallel(styles));
