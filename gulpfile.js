@@ -6,6 +6,12 @@ const sourcemaps = require('gulp-sourcemaps');
 const imagemin = require('gulp-imagemin');
 const uglify = require('gulp-uglify');
 
+function copyHtml() {
+    // Apenas copia o index.html da raiz para a pasta dist
+    return gulp.src('./index.html')
+        .pipe(gulp.dest('./dist'));
+}
+
 // =======================
 // COMPILAR + MINIFICAR SCSS → CSS
 // =======================
@@ -39,7 +45,7 @@ function images() {
 // =======================
 // TAREFAS PADRÃO E WATCH
 // =======================
-exports.default = gulp.parallel(styles, images, scripts);
+exports.default = gulp.parallel(copyHtml, styles, images, scripts);
 
 exports.watch = function () {
     gulp.watch('./src/styles/**/*.scss', gulp.parallel(styles));
