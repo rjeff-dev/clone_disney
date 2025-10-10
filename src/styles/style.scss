@@ -45,14 +45,26 @@ body{
 
 .text--big{
     @include text(18px);
+
+    @media (max-width: 768){
+        @include text(15px)
+    }
 }
 
 .text{
     @include text;
+
+    @media (max-width: 768){
+        @include text(14px)
+    }
 }
 
 .text--small{
     @include text(12px);
+
+    @media (max-width: 768){
+        @include text(11px)
+    }
 }
 
 .link-text{
@@ -63,14 +75,26 @@ body{
 
 .title--big{
     @include title(44px);
+
+    @media (max-width: 768){
+        @include title(26px)
+    }
 }
 
 .title{
     @include title;
+
+    @media (max-width: 768){
+        @include title(24px)
+    }
 }
 
 .title--small{
     @include title(28px);
+
+    @media (max-width: 768){
+        @include title(22px)
+    }
 }
 
 
@@ -123,6 +147,10 @@ body{
     align-items: center;
     gap: 32px;
 
+    @media (max-width: 768px){
+        display: block;
+    }
+
     img{
         width: 100%;
     }
@@ -152,6 +180,13 @@ body{
             display: flex;
             flex-direction: column;
             justify-content: center;
+
+            
+            @media (max-width: 768px) {
+                position: relative;
+                left: 0;
+                width: 100%;
+            }
         }
     }
 }
